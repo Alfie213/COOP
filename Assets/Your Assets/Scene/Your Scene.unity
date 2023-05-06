@@ -1665,6 +1665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 1800987513355448395, guid: 81d6493a70e08d4429151c9b2f2aea96, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: badbefa1b38bccc48ad458a113ab52f7, type: 2}
     - target: {fileID: 1800987513355448398, guid: 81d6493a70e08d4429151c9b2f2aea96, type: 3}
       propertyPath: m_RootOrder
       value: 0
