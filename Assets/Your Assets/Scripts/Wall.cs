@@ -19,13 +19,13 @@ namespace Alfie
 		{
             if (collision.gameObject.GetComponent<BallPickUp>())
             {
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
                 _health--;
 				_healthTMP.text = _health.ToString();
 				if (_health <= 0)
 				{
 					_healthTMP.text = string.Empty;
-					Debug.Log("all");
+					//Debug.Log("all");
 					Destroy(gameObject);
 				}
             }
