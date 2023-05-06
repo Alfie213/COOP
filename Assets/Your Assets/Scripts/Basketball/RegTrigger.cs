@@ -3,23 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegTrigger : MonoBehaviour
+namespace Alfie
 {
-    [SerializeField] private int _requiredAmount = 3;
-    [SerializeField] private GameObject _barrier;
-
-    private int _countBalls;
-
-    private void OnTriggerEnter(Collider other)
+    public class RegTrigger : MonoBehaviour
     {
-        if (other.gameObject.GetComponent<BallPickUp>())
+        [SerializeField] private int _requiredAmount = 3;
+        [SerializeField] private GameObject _barrier;
+
+        private int _countBalls;
+
+        private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<BallPickUp>().GetThrowBasket())
+            if (other.gameObject.GetComponent<BallPickUp>())
             {
-                _countBalls++;
-                if (_countBalls >= _requiredAmount)
+                if (other.gameObject.GetComponent<BallPickUp>().GetThrowBasket())
                 {
-                    _barrier.SetActive(false);
+                    _countBalls++;
+                    if (_countBalls >= _requiredAmount)
+                    {
+                        _barrier.SetActive(false);
+                    }
                 }
             }
         }

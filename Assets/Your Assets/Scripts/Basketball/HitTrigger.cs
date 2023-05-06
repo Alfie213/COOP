@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitTrigger : MonoBehaviour
+namespace Alfie
 {
-    private void OnTriggerEnter(Collider other)
+    public class HitTrigger : MonoBehaviour
     {
-        if (other.gameObject.GetComponent<BallPickUp>())
+        private void OnTriggerEnter(Collider other)
         {
-            other.gameObject.GetComponent<BallPickUp>().SetThrowBasket(true);
+            if (other.gameObject.GetComponent<BallPickUp>())
+            {
+                other.gameObject.GetComponent<BallPickUp>().SetThrowBasket(true);
+            }
         }
     }
 }
