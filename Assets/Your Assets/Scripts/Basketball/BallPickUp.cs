@@ -11,15 +11,20 @@ namespace Alfie
 
 		[SerializeField] private bool _throwBasket;
 
-		private void Awake()
+        private void Awake()
+        {
+            _throwBasket = false;
+        }
+
+        public bool GetThrowBasket()
 		{
-			_throwBasket = false;
+			return _throwBasket;
 		}
 
 		public void SetThrowBasket(bool value)
 		{
 			_throwBasket = value;
-		}	
+		}
 
         public override void OnDrop(Inventory inventory)
 		{
