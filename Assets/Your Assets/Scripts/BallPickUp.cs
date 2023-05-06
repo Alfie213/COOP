@@ -6,8 +6,21 @@ namespace Alfie
 {
 	public class BallPickUp : Pickup
 	{
-		[SerializeField] private float _throwForce;
-		[SerializeField] private float _upwardForce;
+		[SerializeField] private float _throwForce = 5f;
+		[SerializeField] private float _upwardForce = 5f;
+
+		[SerializeField] private bool _throwBasket;
+
+		private void Awake()
+		{
+			_throwBasket = false;
+		}
+
+		public void SetThrowBasket(bool value)
+		{
+			_throwBasket = value;
+		}	
+
         public override void OnDrop(Inventory inventory)
 		{
 			GameObject ball = Player.Inventory.HoldedPickup.gameObject;
