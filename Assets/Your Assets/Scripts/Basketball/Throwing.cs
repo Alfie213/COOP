@@ -21,7 +21,6 @@ namespace Alfie
 		{
 			if (Input.GetKeyDown(KeyCode.E))
 			{
-                Debug.Log(gameObject.name);
                 Throw();
             }
 		}
