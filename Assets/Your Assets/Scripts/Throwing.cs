@@ -19,7 +19,7 @@ namespace Alfie
 
         private void Update()
 		{
-			if (Input.GetKeyDown(KeyCode.E))
+			if (Input.GetKey(KeyCode.E))
 			{
                 Throw();
             }
